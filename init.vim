@@ -1,7 +1,7 @@
 :set tabstop=4
 :set shiftwidth=4
 :set softtabstop=4
-:set autoindent
+:set smartindent
 :set number
 :set clipboard=unnamedplus
 :set nowrap
@@ -11,10 +11,10 @@ inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 
-inoremap <expr> <Enter> getline('.')[col('.') - 2] == '{' && getline('.')[col('.') - 1] == '}' ? '<Left><Enter><Right><Enter><Tab><Enter><Backspace><Up><Right>' : (getline('.')[col('.') - 2] == '[' && getline('.')[col('.') - 1] == ']' ? '<Left><Enter><Right><Enter><Tab><Enter><Backspace><Up><Right>' : '<Enter>')
-
 inoremap <expr> ) getline('.')[col('.') - 1] == ')' ? '<Right>' : ')'
 inoremap <expr> ] getline('.')[col('.') - 1] == ']' ? '<Right>' : ']'
+
+inoremap <expr> <Enter> getline('.')[col('.') - 2] == '{' && getline('.')[col('.') - 1] == '}' ? '<Left><Enter><Right><Enter><Enter><Up><Tab>' : (getline('.')[col('.') - 2] == '[' && getline('.')[col('.') - 1] == ']' ? '<Left><Enter><Right><Enter><Enter><Up><Tab>' : '<Enter>')
 
 call plug#begin('~/local/share/nvim/plugged')
 
