@@ -13,6 +13,9 @@ inoremap ' ''<Left>
 
 inoremap <expr> <Enter> getline('.')[col('.') - 2] == '{' && getline('.')[col('.') - 1] == '}' ? '<Left><Enter><Right><Enter><Tab><Enter><Backspace><Up><Right>' : (getline('.')[col('.') - 2] == '[' && getline('.')[col('.') - 1] == ']' ? '<Left><Enter><Right><Enter><Tab><Enter><Backspace><Up><Right>' : '<Enter>')
 
+inoremap <expr> ) getline('.')[col('.') - 1] == ')' ? '<Right>' : ')'
+inoremap <expr> ] getline('.')[col('.') - 1] == ']' ? '<Right>' : ']'
+
 call plug#begin('~/local/share/nvim/plugged')
 
 Plug 'tanvirtin/monokai.nvim'
