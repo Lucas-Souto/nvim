@@ -22,6 +22,7 @@ Plug 'tanvirtin/monokai.nvim'
 Plug 'lambdalisue/fern.vim'
 Plug 'Shougo/deoplete.nvim'
 Plug 'zchee/deoplete-clang'
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
@@ -31,3 +32,5 @@ colorscheme monokai
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-18/lib/libclang-18.so.18'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-18/lib/clang/18/include/'
 let g:deoplete#enable_at_startup = 1
+
+lua require('Comment').setup()
