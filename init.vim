@@ -21,9 +21,26 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'tanvirtin/monokai.nvim'
 Plug 'lambdalisue/fern.vim'
-Plug 'Shougo/deoplete.nvim'
+Plug 'lambdalisue/vim-fern-git-status'
+Plug 'lambdalisue/vim-nerdfont'
+Plug 'lambdalisue/vim-fern-renderer-nerdfont'
+Plug 'numToStr/Comment.nvim'
+Plug 'mattn/emmet-vim'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()
 
 syntax on
 colorscheme monokai
+
+lua require('Comment').setup()
+
+let g:fern#renderer = 'nerdfont'
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+lua require('lualine').setup()
+
+lua require('colorizer').setup { css = { rgb_fn = true; hsl_fn = true }; html = { mode = 'foreground' }; }
