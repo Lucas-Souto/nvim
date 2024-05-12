@@ -36,3 +36,4 @@ vim.g['deoplete#sources#clang#clang_header'] = '/usr/lib/llvm-18/lib/clang/18/in
 vim.g['deoplete#enable_at_startup'] = 1
 
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
+vim.g["deoplete#source#ternjs#docs"] = 1
