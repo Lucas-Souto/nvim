@@ -33,8 +33,7 @@ Plug('norcalli/nvim-colorizer.lua')
 Plug('tpope/vim-fugitive')
 vim.call('plug#end')
 
-vim.cmd('syntax on')
-vim.cmd('colorscheme monokai')
+require('monokai').setup()
 
 require('Comment').setup()
 
