@@ -1,18 +1,25 @@
 local keymap = vim.api.nvim_set_keymap
-local i_opt = { noremap = true }
+local opt = { noremap = true }
 local ie_opt = { expr = true, noremap = true }
 local n_opt = { silent = true, noremap = true }
 
 -- Fecha automaticamente {, (, [, ", e '
-keymap('i', '{', '{}<Left>', i_opt)
-keymap('i', '(', '()<Left>', i_opt)
-keymap('i', '[', '[]<Left>', i_opt)
-keymap('i', '"', '""<Left>', i_opt)
-keymap('i', "'", "''<Left>", i_opt)
+keymap('i', '{', '{}<Left>', opt)
+keymap('i', '(', '()<Left>', opt)
+keymap('i', '[', '[]<Left>', opt)
+keymap('i', '"', '""<Left>', opt)
+keymap('i', "'", "''<Left>", opt)
 
 -- Evita escrever ) e ] se já houver um do lado
 keymap('i', ')', 'getline(".")[col(".") - 1] == ")" ? "<Right>" : ")"', ie_opt)
 keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
+
+-- Insere {}, (), [], "" e '' no modo visual
+keymap('v', '{', ':lua require("functions").embrace_selection("{", "}")<cr>', n_opt)
+keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<cr>', n_opt)
+keymap('v', '[', ':lua require("functions").embrace_selection("[", "]")<cr>', n_opt)
+keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<cr>', n_opt)
+keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<cr>", n_opt)
 
 -- Quebra automática de linha
 keymap('i', '<CR>', 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><CR><Up><Tab>" : (getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<Left><CR><Right><CR><CR><Up><Tab>" : "<CR>")', ie_opt)
