@@ -1,23 +1,24 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-Plug('tanvirtin/monokai.nvim')
-Plug('lambdalisue/fern.vim')
-Plug('lambdalisue/vim-fern-git-status')
-Plug('lambdalisue/vim-nerdfont')
-Plug('lambdalisue/vim-fern-renderer-nerdfont')
-Plug('numToStr/Comment.nvim')
-Plug('mattn/emmet-vim')
-Plug('nvim-lualine/lualine.nvim')
-Plug('norcalli/nvim-colorizer.lua')
-Plug('tpope/vim-fugitive')
+Plug('tanvirtin/monokai.nvim')-- Tema
+Plug('lambdalisue/fern.vim')-- Explorador de arquivos
+Plug('lambdalisue/vim-fern-git-status')-- Git Status
+Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
+Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderer para ícones
+Plug('lambdalisue/vim-glyph-palette')-- Cores para os ícones
+Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção
+Plug('mattn/emmet-vim')-- Emmet
+Plug('nvim-lualine/lualine.nvim')-- Footer
+Plug('norcalli/nvim-colorizer.lua')-- Preview de cores
+Plug('tpope/vim-fugitive')-- Comandos git
 vim.call('plug#end')
 
 require('monokai').setup()
 
 require('Comment').setup()
 
-vim.g.fern_renderer = 'nerdfont'
+vim.g['fern#renderer'] = 'nerdfont'
 
 vim.g.user_emmet_install_global = 0
 vim.cmd('autocmd FileType html,css EmmetInstall')

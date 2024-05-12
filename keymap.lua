@@ -24,6 +24,9 @@ keymap('n', '<C-r>o', ':e $MYVIMRC<cr>', n_opt)
 -- CTRL + S para salvar
 keymap('n', '<C-s>', ':w<cr>', n_opt)
 
+-- Atalho para abrir o Fern
+keymap('n', '<C-f>o', ':Fern . -drawer<cr>', n_opt)
+
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', n_opt)
 keymap('n', '<C-Left>', '<C-w>h', n_opt)
