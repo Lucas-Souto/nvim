@@ -5,8 +5,11 @@ vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.wrap = false
+vim.opt.swapfile = false
 vim.opt.completeopt:remove('preview')
-vim.opt.foldmethod='indent'
+vim.opt.foldmethod = 'indent'
+
+package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto 
 
 require('keymap')
 require('plugins')
