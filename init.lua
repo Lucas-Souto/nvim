@@ -6,6 +6,7 @@ vim.opt.number = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.wrap = false
 vim.opt.completeopt:remove("preview")
+vim.opt.foldmethod="manual"
 
 require('keymap')
 require('plugins')

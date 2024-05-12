@@ -12,6 +12,9 @@ Plug('mattn/emmet-vim')-- Emmet
 Plug('nvim-lualine/lualine.nvim')-- Footer
 Plug('norcalli/nvim-colorizer.lua')-- Preview de cores
 Plug('tpope/vim-fugitive')-- Comandos git
+Plug('anuvyklack/pretty-fold.nvim')-- Customização de fold
+Plug('anuvyklack/keymap-amend.nvim')-- Dependência do fold-preview
+Plug('anuvyklack/fold-preview.nvim')-- Preview de fold
 -- Code complete
 Plug('Shougo/deoplete.nvim') 
 Plug('zchee/deoplete-clang')
@@ -37,3 +40,6 @@ vim.g['deoplete#enable_at_startup'] = 1
 
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
 vim.g["deoplete#source#ternjs#docs"] = 1
+
+require('pretty-fold').setup()
+require('fold-preview').setup { auto = 400 }
