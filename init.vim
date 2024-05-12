@@ -28,6 +28,7 @@ Plug 'numToStr/Comment.nvim'
 Plug 'mattn/emmet-vim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
