@@ -60,6 +60,8 @@ keymap('n', '<C-w><Down>', ':resize +2<cr>', s_opt)
 keymap('n', '<C-t>n', ':tabnew<cr>', s_opt)
 keymap('n', '<C-t>w', ':tabclose<cr>', s_opt)
 keymap('n', '<C-t>W', ':tabonly<cr>', s_opt)
+
+-- Navegação entre abas
 keymap('n', '<C-t><Left>', ':-tabnext<cr>', s_opt)
 keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
 
