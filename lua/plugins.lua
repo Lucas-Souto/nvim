@@ -1,20 +1,21 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
-Plug('tanvirtin/monokai.nvim')-- Tema
+-- Funcionalidade
 Plug('lambdalisue/fern.vim')-- Explorador de arquivos
 Plug('lambdalisue/vim-fern-git-status')-- Git Status
-Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
-Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderer para ícones
-Plug('lambdalisue/vim-glyph-palette')-- Cores para os ícones
-Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção
 Plug('mattn/emmet-vim')-- Emmet
-Plug('nvim-lualine/lualine.nvim')-- Status
-Plug('norcalli/nvim-colorizer.lua')-- Preview de cores
+Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
+Plug('anuvyklack/keymap-amend.nvim')-- Dependência --V
+Plug('anuvyklack/fold-preview.nvim')-- Pré-visualizar blocos colapsados
 Plug('tpope/vim-fugitive')-- Comandos git
-Plug('anuvyklack/pretty-fold.nvim')-- Customização de fold
-Plug('anuvyklack/keymap-amend.nvim')-- Dependência do fold-preview
-Plug('anuvyklack/fold-preview.nvim')-- Preview de fold
+Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
+-- Aparência
+Plug('tanvirtin/monokai.nvim')-- Tema
+Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
+Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones
+Plug('lambdalisue/vim-glyph-palette')-- Cores para os ícones --^
+Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('lukas-reineke/indent-blankline.nvim')-- Linhas guia de escopo
 Plug('nanozuki/tabby.nvim')-- Abas
 -- Code complete
@@ -42,7 +43,6 @@ vim.g['deoplete#enable_at_startup'] = 1
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
 vim.g["deoplete#source#ternjs#docs"] = 1
 
-require('pretty-fold').setup()
 require('fold-preview').setup { auto = 400 }
 
 require('ibl').setup()
