@@ -62,3 +62,7 @@ keymap('n', '<C-t>w', ':tabclose<cr>', s_opt)
 keymap('n', '<C-t>W', ':tabonly<cr>', s_opt)
 keymap('n', '<C-t><Left>', ':-tabnext<cr>', s_opt)
 keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
+
+-- Movimentação de abas
+keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
+keymap('n', '<C-t>m<Right>', ':+tabmove<cr>', s_opt)
