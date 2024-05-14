@@ -69,5 +69,5 @@ keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
 keymap('n', '<C-t>m<Right>', ':+tabmove<cr>', s_opt)
 
 -- Salvar e carregar folds
-keymap('n', '<C-z>m', ':mkview<cr>', s_opt)
+keymap('n', '<C-z>s', ':mkview<cr>', s_opt)
 keymap('n', '<C-z>l', ':loadview<cr>', s_opt)
