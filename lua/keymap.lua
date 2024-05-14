@@ -40,8 +40,7 @@ keymap('i', '<BS>', atrm, ie_opt)
 -- CTRL + S para salvar
 keymap('n', '<C-s>', ':w<cr>', s_opt)
 
--- Atalhos para abrir o Fern
-keymap('n', '<C-f>o', ':Fern . -drawer<cr>', s_opt)
+-- Atalho para abrir o Fern
 keymap('n', '<C-f>p', ':Fern .<cr>', s_opt)
 
 -- Navegação entre janelas
@@ -68,3 +67,7 @@ keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
 -- Movimentação de abas
 keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
 keymap('n', '<C-t>m<Right>', ':+tabmove<cr>', s_opt)
+
+-- Salvar e carregar folds
+keymap('n', '<C-z>m', ':mkview<cr>', s_opt)
+keymap('n', '<C-z>l', ':loadview<cr>', s_opt)
