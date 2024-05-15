@@ -16,7 +16,6 @@ Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
 Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones
 Plug('lambdalisue/vim-glyph-palette')-- Cores para os ícones --^
 Plug('nvim-lualine/lualine.nvim')-- Status
-Plug('lukas-reineke/indent-blankline.nvim')-- Linhas guia de escopo
 Plug('nanozuki/tabby.nvim')-- Abas
 -- Code complete
 Plug('Shougo/deoplete.nvim') 
@@ -44,8 +43,6 @@ vim.cmd('call deoplete#custom#option("num_processes", 4)')
 vim.g["deoplete#source#ternjs#docs"] = 1
 
 require('fold-preview').setup { auto = 400 }
-
-require('ibl').setup()
 
 require('tabby.tabline').use_preset('tab_only',
 {
