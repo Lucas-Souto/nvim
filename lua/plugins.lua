@@ -3,10 +3,8 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Funcionalidade
 Plug('lambdalisue/fern.vim')-- Explorador de arquivos
-Plug('lambdalisue/vim-fern-git-status')-- Git Status
 Plug('mattn/emmet-vim')-- Emmet
 Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
-Plug('anuvyklack/keymap-amend.nvim')-- Dependência --V
 Plug('tpope/vim-fugitive')-- Comandos git
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 -- Aparência

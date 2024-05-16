@@ -41,6 +41,7 @@ keymap('i', '<BS>', atrm, ie_opt)
 keymap('n', '<C-s>', ':w<cr>', s_opt)
 
 -- Atalho para abrir o Fern
+keymap('n', '<C-f>o', ':Fern . -drawer<cr>', s_opt)
 keymap('n', '<C-f>p', ':Fern .<cr>', s_opt)
 
 -- Navegação entre janelas
@@ -53,6 +54,7 @@ keymap('n', '<C-Up>', '<C-w>k', s_opt)
 keymap('n', '<C-w><Left>', ':vertical resize -2<cr>', s_opt)
 keymap('n', '<C-w><Right>', ':vertical resize +2<cr>', s_opt)
 keymap('n', '<C-w><Up>', ':resize -2<cr>', s_opt)
+
 keymap('n', '<C-w><Down>', ':resize +2<cr>', s_opt)
 
 -- Manipulação de abas
