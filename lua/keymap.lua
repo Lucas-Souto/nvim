@@ -15,11 +15,15 @@ keymap('i', ')', 'getline(".")[col(".") - 1] == ")" ? "<Right>" : ")"', ie_opt)
 keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
 
 -- Insere {}, (), [], "" e '' no modo visual
-keymap('v', '{', ':lua require("functions").embrace_selection("{", "}")<cr>', s_opt)
-keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<cr>', s_opt)
-keymap('v', '[', ':lua require("functions").embrace_selection("[", "]")<cr>', s_opt)
-keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<cr>', s_opt)
-keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<cr>", s_opt)
+keymap('v', '{', ':lua require("functions").embrace_selection("{ ", " }")<CR>', s_opt)
+keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<CR>', s_opt)
+keymap('v', '[', ':lua require("functions").embrace_selection("[ ", " ]")<CR>', s_opt)
+keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<CR>', s_opt)
+keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>", s_opt)
+
+-- Tab e Shift Tab para seleções
+keymap('v', '<Tab>', '1 >', s_opt)
+keymap('v', '<S-Tab>', '1 <', s_opt)
 
 -- Quebra automática de linha
 local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><CR><Up><Tab>" : '
@@ -54,7 +58,6 @@ keymap('n', '<C-Up>', '<C-w>k', s_opt)
 keymap('n', '<C-w><Left>', ':vertical resize -2<cr>', s_opt)
 keymap('n', '<C-w><Right>', ':vertical resize +2<cr>', s_opt)
 keymap('n', '<C-w><Up>', ':resize -2<cr>', s_opt)
-
 keymap('n', '<C-w><Down>', ':resize +2<cr>', s_opt)
 
 -- Manipulação de abas
