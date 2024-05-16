@@ -7,7 +7,6 @@ Plug('lambdalisue/vim-fern-git-status')-- Git Status
 Plug('mattn/emmet-vim')-- Emmet
 Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
 Plug('anuvyklack/keymap-amend.nvim')-- Dependência --V
-Plug('anuvyklack/fold-preview.nvim')-- Pré-visualizar blocos colapsados
 Plug('tpope/vim-fugitive')-- Comandos git
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 -- Aparência
@@ -41,8 +40,6 @@ vim.g['deoplete#sources#clang#clang_header'] = '/usr/lib/llvm-18/lib/clang/18/in
 vim.g['deoplete#enable_at_startup'] = 1
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
 vim.g["deoplete#source#ternjs#docs"] = 1
-
-require('fold-preview').setup { auto = 400 }
 
 require('tabby.tabline').use_preset('tab_only',
 {

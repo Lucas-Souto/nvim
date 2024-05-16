@@ -7,7 +7,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.completeopt:remove('preview')
-vim.opt.foldmethod = 'indent'
 
 package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto 
 
