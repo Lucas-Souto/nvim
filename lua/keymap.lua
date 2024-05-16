@@ -21,9 +21,11 @@ keymap('v', '[', ':lua require("functions").embrace_selection("[ ", " ]")<CR>', 
 keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<CR>', s_opt)
 keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>", s_opt)
 
--- Tab e Shift Tab para seleções
+-- Tab e Shift Tab
 keymap('v', '<Tab>', '1 >', s_opt)
 keymap('v', '<S-Tab>', '1 <', s_opt)
+keymap('n', '<Tab>', 'v 1 >', s_opt)
+keymap('n', '<S-Tab>', 'v 1 <', s_opt)
 
 -- Quebra automática de linha
 local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><CR><Up><Tab>" : '
