@@ -9,9 +9,8 @@ Plug('tpope/vim-fugitive')-- Comandos git
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
-Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
-Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones
-Plug('lambdalisue/vim-glyph-palette')-- Cores para os ícones --^
+Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V 
+Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones 
 Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
 -- Code complete
@@ -24,7 +23,7 @@ require('monokai').setup()
 
 require('Comment').setup()
 
-vim.g['fern#renderer'] = 'nerdfont'
+vim.g['fern#renderer'] = 'nerdfont' 
 
 vim.g.user_emmet_install_global = 0
 vim.cmd('autocmd FileType html,css EmmetInstall')
