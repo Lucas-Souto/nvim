@@ -15,7 +15,6 @@ Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
 -- Code complete
 Plug('Shougo/deoplete.nvim') 
-Plug('zchee/deoplete-clang')
 Plug('carlitux/deoplete-ternjs', { ['do'] = 'npm install -g tern' })
 vim.call('plug#end')
 
@@ -23,7 +22,7 @@ require('monokai').setup()
 
 require('Comment').setup()
 
-vim.g['fern#renderer'] = 'nerdfont' 
+vim.g['fern#renderer'] = 'nerdfont'
 
 vim.g.user_emmet_install_global = 0
 vim.cmd('autocmd FileType html,css EmmetInstall')
@@ -32,8 +31,6 @@ require('lualine').setup()
 
 require('colorizer').setup { css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } }
 
-vim.g['deoplete#sources#clang#libclang_path'] = '/usr/lib/llvm-18/lib/libclang-18.so.18'
-vim.g['deoplete#sources#clang#clang_header'] = '/usr/lib/llvm-18/lib/clang/18/include/'
 vim.g['deoplete#enable_at_startup'] = 1
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
 vim.g["deoplete#source#ternjs#docs"] = 1
