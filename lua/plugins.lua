@@ -14,7 +14,8 @@ Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones
 Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
 -- Code complete
-Plug('Shougo/deoplete.nvim') 
+Plug('Shougo/deoplete.nvim')
+Plug('zchee/deoplete-clang')
 Plug('carlitux/deoplete-ternjs', { ['do'] = 'npm install -g tern' })
 vim.call('plug#end')
 
@@ -33,6 +34,8 @@ require('colorizer').setup { css = { rgb_fn = true, hsl_fn = true }, html = { mo
 
 vim.g['deoplete#enable_at_startup'] = 1
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
+vim.g['deoplete#sources#clang#libclang_path'] = '/usr/lib/llvm-18/lib/libclang-18.so.18'
+vim.g['deoplete#sources#clang#clang_header'] = '/usr/lib/llvm-18/lib/clang/18/include/'
 vim.g["deoplete#source#ternjs#docs"] = 1
 
 require('tabby.tabline').use_preset('tab_only',
