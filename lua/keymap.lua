@@ -74,3 +74,7 @@ keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
 -- Movimentação de abas
 keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
 keymap('n', '<C-t>m<Right>', ':+tabmove<cr>', s_opt)
+
+-- Fold save e load
+keymap('n', 'zs', ':mkview<cr>', s_opt)
+keymap('n', 'zl', ':loadview<cr>', s_opt)
