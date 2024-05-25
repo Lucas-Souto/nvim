@@ -28,8 +28,8 @@ keymap('n', '<Tab>', 'v 1 >', s_opt)
 keymap('n', '<S-Tab>', 'v 1 <', s_opt)
 
 -- Quebra automática de linha
-local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><CR><Up><Tab>" : '
-brl = brl .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<Left><CR><Right><CR><CR><Up><Tab>" : "<CR>")'
+local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><Up><Right>" : '
+brl = brl .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<Left><CR><Right><CR><Up><Right>" : "<CR>")'
 
 keymap('i', '<CR>', brl, ie_opt)
 
