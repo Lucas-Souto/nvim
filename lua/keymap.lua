@@ -48,7 +48,7 @@ keymap('n', '<C-s>', ':w<cr>', s_opt)
 
 -- Atalho para abrir o Fern
 keymap('n', '<C-f>o', ':Fern . -drawer<cr>', s_opt)
-keymap('n', '<C-f>p', ':Fern .<cr>', s_opt)
+keymap('n', '<C-f>p', ':Fern ./', s_opt)
 
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', s_opt)
