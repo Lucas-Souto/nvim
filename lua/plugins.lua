@@ -3,10 +3,8 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 -- Funcionalidade
 Plug('lambdalisue/fern.vim')-- Explorador de arquivos
-Plug('mattn/emmet-vim')-- Emmet
 Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
 Plug('tpope/vim-fugitive')-- Comandos git
-Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V 
@@ -24,12 +22,7 @@ require('Comment').setup()
 
 vim.g['fern#renderer'] = 'nerdfont'
 
-vim.g.user_emmet_install_global = 0
-vim.cmd('autocmd FileType html,css EmmetInstall')
-
 require('lualine').setup()
-
-require('colorizer').setup { css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } }
 
 vim.g['deoplete#enable_at_startup'] = 1
 vim.cmd('call deoplete#custom#option("num_processes", 4)')
