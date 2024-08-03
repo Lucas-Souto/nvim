@@ -11,6 +11,9 @@ Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V
 Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones 
 Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
+-- Linguagem
+Plug('neovim/nvim-lspconfig')-- LSP
+Plug('fatih/vim-go')-- GO
 vim.call('plug#end')
 
 require('monokai').setup()
