@@ -13,3 +13,14 @@ package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto
 
 require('keymap')
 require('plugins')
+
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd("FileType",
+{
+	callback = function()
+		vim.schedule(function()
+			vim.opt.indentexpr = ""
+		end)
+	end
+})
