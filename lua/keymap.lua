@@ -18,8 +18,6 @@ keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
 keymap('v', '{', ':lua require("functions").embrace_selection("{ ", " }")<CR>', s_opt)
 keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<CR>', s_opt)
 keymap('v', '[', ':lua require("functions").embrace_selection("[ ", " ]")<CR>', s_opt)
-keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<CR>', s_opt)
-keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>", s_opt)
 
 -- Quebra automática de linha
 local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><Tab><CR><BS><Up><Right>" : '
@@ -44,7 +42,6 @@ keymap('n', '<C-s>', ':w<cr>', s_opt)
 keymap('n', '<C-u>', ':UndotreeToggle<cr>', s_opt)
 
 -- Atalho para abrir o Fern
-keymap('n', '<C-f>o', ':Fern . -drawer<cr>', s_opt)
 keymap('n', '<C-f>p', ':Fern ./', s_opt)
 
 -- Navegação entre janelas
