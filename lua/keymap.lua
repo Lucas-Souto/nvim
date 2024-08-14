@@ -40,6 +40,9 @@ keymap('i', '<BS>', atrm, ie_opt)
 -- CTRL + S para salvar
 keymap('n', '<C-s>', ':w<cr>', s_opt)
 
+-- Undotree
+keymap('n', '<C-u>', ':UndotreeToggle<cr>', s_opt)
+
 -- Atalho para abrir o Fern
 keymap('n', '<C-f>o', ':Fern . -drawer<cr>', s_opt)
 keymap('n', '<C-f>p', ':Fern ./', s_opt)

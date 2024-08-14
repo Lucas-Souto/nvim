@@ -7,6 +7,7 @@ Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
 Plug('tpope/vim-fugitive')-- Comandos git
 Plug('mattn/emmet-vim')-- Emmet
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
+Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V 
