@@ -3,12 +3,10 @@ local opt = { noremap = true }
 local ie_opt = { expr = true, noremap = true }
 local s_opt = { silent = true, noremap = true }
 
--- Fecha automaticamente {, (, [, ", e '
+-- Fecha automaticamente {, (, [
 keymap('i', '{', '{}<Left>', opt)
 keymap('i', '(', '()<Left>', opt)
 keymap('i', '[', '[]<Left>', opt)
-keymap('i', '"', '""<Left>', opt)
-keymap('i', "'", "''<Left>", opt)
 
 -- Evita escrever ) e ] se já houver um do lado
 keymap('i', ')', 'getline(".")[col(".") - 1] == ")" ? "<Right>" : ")"', ie_opt)
@@ -18,6 +16,8 @@ keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
 keymap('v', '{', ':lua require("functions").embrace_selection("{ ", " }")<CR>', s_opt)
 keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<CR>', s_opt)
 keymap('v', '[', ':lua require("functions").embrace_selection("[ ", " ]")<CR>', s_opt)
+keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<CR>', s_opt)
+keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>", s_opt)
 
 -- Quebra automática de linha
 local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><Tab><CR><BS><Up><Right>" : '
@@ -25,13 +25,11 @@ brl = brl .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] =
 
 keymap('i', '<CR>', brl, ie_opt)
 
--- Remoção automática de {}, (), [], "" e ''
+-- Remoção automática de {}, (), []
 local atrm = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Right><BS><BS>" : '
 atrm = atrm .. '(getline(".")[col(".") - 2] == "(" && getline(".")[col(".") - 1] == ")" ? "<right><BS><BS>" : '
 atrm = atrm .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<right><BS><BS>" : '
-atrm = atrm .. '(getline(".")[col(".") - 2] == "\'" && getline(".")[col(".") - 1] == "\'" ? "<right><BS><BS>" : '
-atrm = atrm .. "(getline('.')[col('.') - 2] == '\"' && getline('.')[col('.') - 1] == '\"' ? '<right><BS><BS>' : "
-atrm = atrm .. '"<BS>"))))'
+atrm = atrm .. '"<BS>"))'
 
 keymap('i', '<BS>', atrm, ie_opt)
 
