@@ -15,7 +15,7 @@ keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
 -- Insere {}, (), [], "" e '' no modo visual
 keymap('v', '{', ':lua require("functions").embrace_selection("{ ", " }")<CR>', s_opt)
 keymap('v', '(', ':lua require("functions").embrace_selection("(", ")")<CR>', s_opt)
-keymap('v', '[', ':lua require("functions").embrace_selection("[ ", " ]")<CR>', s_opt)
+keymap('v', '[', ':lua require("functions").embrace_selection("[", "]")<CR>', s_opt)
 keymap('v', '"', ':lua require("functions").embrace_selection(\'"\', \'"\')<CR>', s_opt)
 keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>", s_opt)
 
@@ -62,6 +62,7 @@ keymap('n', '<C-t>W', ':tabonly<cr>', s_opt)
 -- Navegação entre abas
 keymap('n', '<C-t><Left>', ':-tabnext<cr>', s_opt)
 keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
+keymap('n', '<C-t>t', ':Tabby jump_to_tab<cr>', s_opt)
 
 -- Movimentação de abas
 keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
