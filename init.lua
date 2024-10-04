@@ -21,7 +21,7 @@ autocmd("FileType",
 {
 	callback = function()
 		vim.schedule(function()
-			vim.opt.indentexpr = ""
+			vim.opt.indentexpr = "nil"
 		end)
 	end
 })
