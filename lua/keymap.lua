@@ -34,13 +34,17 @@ atrm = atrm .. '"<BS>"))'
 keymap('i', '<BS>', atrm, ie_opt)
 
 -- CTRL + S para salvar
-keymap('n', '<C-s>', ':w<cr>', s_opt)
+keymap('n', '<C-s>', ':w<CR>', s_opt)
 
 -- Undotree
-keymap('n', '<C-u>', ':UndotreeToggle<cr>', s_opt)
+keymap('n', '<C-u>', ':UndotreeToggle<CR>', s_opt)
 
--- Atalho para abrir o Fern
-keymap('n', '<C-f>p', ':Fern ./', s_opt)
+-- Atalhos do Telescope (Arquivos)
+keymap('n', '<C-f>f', ':Telescope find_files<CR>', s_opt)
+keymap('n', '<C-f>g', ':Telescope live_grep<CR>', s_opt)
+-- Atalhos do Telescope (Git)
+keymap('n', '<C-g>c', ':Telescope git_commits<CR>', s_opt)
+keymap('n', '<C-g>s', ':Telescope git_status<CR>', s_opt)
 
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', s_opt)
@@ -49,25 +53,25 @@ keymap('n', '<C-Down>', '<C-w>j', s_opt)
 keymap('n', '<C-Up>', '<C-w>k', s_opt)
 
 -- Modificação do tamanho das janelas
-keymap('n', '<C-w><Left>', ':vertical resize -2<cr>', s_opt)
-keymap('n', '<C-w><Right>', ':vertical resize +2<cr>', s_opt)
-keymap('n', '<C-w><Up>', ':resize -2<cr>', s_opt)
-keymap('n', '<C-w><Down>', ':resize +2<cr>', s_opt)
+keymap('n', '<C-w><Left>', ':vertical resize -2<CR>', s_opt)
+keymap('n', '<C-w><Right>', ':vertical resize +2<CR>', s_opt)
+keymap('n', '<C-w><Up>', ':resize -2<CR>', s_opt)
+keymap('n', '<C-w><Down>', ':resize +2<CR>', s_opt)
 
 -- Manipulação de abas
-keymap('n', '<C-t>n', ':tabnew<cr>', s_opt)
-keymap('n', '<C-t>w', ':tabclose<cr>', s_opt)
-keymap('n', '<C-t>W', ':tabonly<cr>', s_opt)
+keymap('n', '<C-t>n', ':tabnew<CR>', s_opt)
+keymap('n', '<C-t>w', ':tabclose<CR>', s_opt)
+keymap('n', '<C-t>W', ':tabonly<CR>', s_opt)
 
 -- Navegação entre abas
-keymap('n', '<C-t><Left>', ':-tabnext<cr>', s_opt)
-keymap('n', '<C-t><Right>', ':+tabnext<cr>', s_opt)
-keymap('n', '<C-t>t', ':Tabby jump_to_tab<cr>', s_opt)
+keymap('n', '<C-t><Left>', ':-tabnext<CR>', s_opt)
+keymap('n', '<C-t><Right>', ':+tabnext<CR>', s_opt)
+keymap('n', '<C-t>t', ':Tabby jump_to_tab<CR>', s_opt)
 
 -- Movimentação de abas
-keymap('n', '<C-t>m<Left>', ':-tabmove<cr>', s_opt)
-keymap('n', '<C-t>m<Right>', ':+tabmove<cr>', s_opt)
+keymap('n', '<C-t>m<Left>', ':-tabmove<CR>', s_opt)
+keymap('n', '<C-t>m<Right>', ':+tabmove<CR>', s_opt)
 
 -- Fold save e load
-keymap('n', 'zs', ':mkview<cr>', s_opt)
-keymap('n', 'zl', ':loadview<cr>', s_opt)
+keymap('n', 'zs', ':mkview<CR>', s_opt)
+keymap('n', 'zl', ':loadview<CR>', s_opt)

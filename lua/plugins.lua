@@ -2,18 +2,18 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 -- Funcionalidade
-Plug('lambdalisue/fern.vim')-- Explorador de arquivos
+Plug('nvim-lua/plenary.nvim')-- Dependência de outros plugins
 Plug('numToStr/Comment.nvim')-- Comentar linhas e seleção (gc, gb)
 Plug('tpope/vim-fugitive')-- Comandos git
 Plug('mattn/emmet-vim')-- Emmet
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
+Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Explorador arquivos (Depende de BurntSushi/ripgrep)
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
-Plug('lambdalisue/vim-nerdfont')-- Nerdfont -----V 
-Plug('lambdalisue/vim-fern-renderer-nerdfont')-- Renderizador para ícones 
 Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
+Plug('nvim-tree/nvim-web-devicons')-- Ícones do Nerdfont
 vim.call('plug#end')
 
 require('monokai').setup()
