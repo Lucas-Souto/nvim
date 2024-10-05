@@ -14,6 +14,7 @@ package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto
 
 require('keymap')
 require('plugins')
+require('lsp')
 
 local autocmd = vim.api.nvim_create_autocmd
 
