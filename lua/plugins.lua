@@ -15,6 +15,7 @@ Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v4.x' })
+Plug('neoclide/vim-jsx-improve')
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status

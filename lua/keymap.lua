@@ -76,3 +76,6 @@ keymap('n', '<C-t>m<Right>', ':+tabmove<CR>', s_opt)
 -- Fold save e load
 keymap('n', 'zs', ':mkview<CR>', s_opt)
 keymap('n', 'zl', ':loadview<CR>', s_opt)
+
+-- LSP
+keymap('n', '<Space>d', ':lua vim.diagnostic.goto_next()<cr>', opt)

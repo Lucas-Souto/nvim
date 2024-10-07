@@ -20,7 +20,12 @@ lsp_zero.extend_lspconfig(
 	capabilities = require('cmp_nvim_lsp').default_capabilities()
 })
 
-lsp_config.denols.setup({})
+local css_capabilities = vim.lsp.protocol.make_client_capabilities()
+css_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lsp_config.css_variables.setup({})
+lsp_config.cssls.setup({ capabilities = css_capabilities })
+lsp_config.eslint.setup({})
 
 cmp.setup(
 {
