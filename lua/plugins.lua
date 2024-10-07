@@ -8,7 +8,8 @@ Plug('tpope/vim-fugitive')-- Comandos git
 Plug('mattn/emmet-vim')-- Emmet
 Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Explorador arquivos (Depende de BurntSushi/ripgrep)
+Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Buscador de arquivos (Depende de BurntSushi/ripgrep)
+Plug('nvim-telescope/telescope-file-browser.nvim')-- Explorador de arquivos
 -- Linguagem
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/nvim-cmp')
