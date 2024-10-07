@@ -16,17 +16,16 @@ Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v4.x' })
 -- Aparência
-Plug('tanvirtin/monokai.nvim')-- Tema
+Plug('loctvl842/monokai-pro.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
 Plug('nvim-tree/nvim-web-devicons')-- Ícones do Nerdfont
 vim.call('plug#end')
 
-require('monokai').setup()
+require('monokai-pro').setup({ filter = 'classic' })
+vim.cmd([[colorscheme monokai-pro]])
 
 require('Comment').setup()
-
-vim.g['fern#renderer'] = 'nerdfont'
 
 require('colorizer').setup { css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } }
 
