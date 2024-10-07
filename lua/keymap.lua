@@ -21,8 +21,7 @@ keymap('v', "'", ":lua require('functions').embrace_selection(\"'\", \"'\")<CR>"
 
 -- Quebra automática de linha
 local brl = 'getline(".")[col(".") - 2] == "{" && getline(".")[col(".") - 1] == "}" ? "<Left><CR><Right><CR><Tab><CR><BS><Up><Right>" : '
-brl = brl .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<Left><CR><Right><CR><Tab><CR><BS><Up><Right>" :'
-brl = brl .. '(getline(".")[col(".") - 2] == ">" && getline(".")[col(".") - 1] == "<" ? "<CR><Tab><CR><BS><Up><Right>" : "<CR>"))'
+brl = brl .. '(getline(".")[col(".") - 2] == "[" && getline(".")[col(".") - 1] == "]" ? "<Left><CR><Right><CR><Tab><CR><BS><Up><Right>" : "<CR>")'
 
 keymap('i', '<CR>', brl, ie_opt)
 
