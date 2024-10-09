@@ -79,3 +79,6 @@ keymap('n', 'zl', ':loadview<CR>', s_opt)
 
 -- LSP
 keymap('n', '<Space>d', ':lua vim.diagnostic.goto_next()<cr>', opt)
+
+-- @ > |
+keymap('n', '|', '@', opt)
