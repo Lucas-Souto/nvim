@@ -21,6 +21,7 @@ lsp_zero.extend_lspconfig(
 })
 
 lsp_config.denols.setup({})
+lsp_config.csharp_ls.setup({})
 
 cmp.setup(
 {
