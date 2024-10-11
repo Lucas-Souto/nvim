@@ -62,6 +62,7 @@ keymap('n', '<C-w><Down>', ':resize +2<CR>', s_opt)
 
 -- Manipulação de abas
 keymap('n', '<C-t>n', ':tabnew<CR>', s_opt)
+keymap('n', '<C-t>c', ':tabnew %<CR>', s_opt)
 keymap('n', '<C-t>w', ':tabclose<CR>', s_opt)
 keymap('n', '<C-t>W', ':tabonly<CR>', s_opt)
 
