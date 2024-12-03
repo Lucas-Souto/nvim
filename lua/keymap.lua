@@ -8,10 +8,11 @@ keymap('i', '{', '{}<Left>', opt)
 keymap('i', '(', '()<Left>', opt)
 keymap('i', '[', '[]<Left>', opt)
 
--- Evita escrever }, ) e ] se já houver um do lado
+-- Evita escrever }, ), ] e ; se já houver um do lado
 keymap('i', '}', 'getline(".")[col(".") - 1] == "}" ? "<Right>" : "}"', ie_opt)
 keymap('i', ')', 'getline(".")[col(".") - 1] == ")" ? "<Right>" : ")"', ie_opt)
 keymap('i', ']', 'getline(".")[col(".") - 1] == "]" ? "<Right>" : "]"', ie_opt)
+keymap('i', ';', 'getline(".")[col(".") - 1] == ";" ? "<Right>" : ";"', ie_opt)
 
 -- Insere {}, (), [], "" e '' no modo visual
 keymap('v', '{', ':lua require("functions").embrace_selection("{ ", " }")<CR>', s_opt)
