@@ -7,6 +7,7 @@ function lsp_attach(client, bufnr)
 	local opts = { buffer = bufnr }
 
 	keymap('n', 'sd', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+	keymap('i', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
 	keymap('n', '<F12>', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
 	keymap('n', 'st', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 	keymap('n', 'sr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
