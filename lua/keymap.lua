@@ -38,6 +38,9 @@ keymap('i', '<BS>', atrm, ie_opt)
 -- CTRL + S para salvar
 keymap('n', '<C-s>', ':w<CR>', s_opt)
 
+-- Saída rápida
+keymap('n', '<C-c>', ':q<CR>', s_opt)
+
 -- Undotree
 keymap('n', '<C-u>', ':UndotreeToggle<CR>', s_opt)
 
@@ -48,6 +51,10 @@ keymap('n', '<C-f>b', ':Telescope file_browser path=%:p:h select_buffer=true<CR>
 -- Atalhos do Telescope (Git)
 keymap('n', '<C-g>c', ':Telescope git_commits<CR>', s_opt)
 keymap('n', '<C-g>s', ':Telescope git_status<CR>', s_opt)
+
+-- Atalhos do Easy-Dotnet
+keymap('n', '<C-d>b', ':Dotnet build<CR>', s_opt)
+keymap('n', '<C-d>r', ':Dotnet run<CR>', s_opt)
 
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', s_opt)

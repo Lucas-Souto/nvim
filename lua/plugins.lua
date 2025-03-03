@@ -10,6 +10,7 @@ Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Buscador de arquivos (Depende de BurntSushi/ripgrep)
 Plug('nvim-telescope/telescope-file-browser.nvim')-- Explorador de arquivos
+Plug('GustavEikaas/easy-dotnet.nvim')-- Qualidade de vida para .NET
 -- Linguagem
 Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/nvim-cmp')
@@ -21,6 +22,8 @@ Plug('nvim-lualine/lualine.nvim')-- Status
 Plug('nanozuki/tabby.nvim')-- Abas
 Plug('nvim-tree/nvim-web-devicons')-- Ícones do Nerdfont
 vim.call('plug#end')
+
+require('easy-dotnet').setup()
 
 require('monokai').setup()
 
