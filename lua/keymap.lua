@@ -55,8 +55,8 @@ keymap('n', '<C-g>c', ':Telescope git_commits<CR>', s_opt)
 keymap('n', '<C-g>s', ':Telescope git_status<CR>', s_opt)
 
 -- Atalhos do Easy-Dotnet
-keymap('n', '<C-d>b', ':Dotnet build<CR>', s_opt)
-keymap('n', '<C-d>r', ':Dotnet run<CR>', s_opt)
+keymap('n', '<C-d>b', ':Dotnet build ..<CR>', s_opt)
+keymap('n', '<C-d>r', ':Dotnet run ..<CR>', s_opt)
 
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', s_opt)
