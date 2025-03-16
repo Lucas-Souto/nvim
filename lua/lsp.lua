@@ -37,7 +37,6 @@ lsp_zero.extend_lspconfig(
 	capabilities = require('cmp_nvim_lsp').default_capabilities()
 })
 
-lsp_config.denols.setup({})
 lsp_config.omnisharp.setup(
 {
     cmd = { "dotnet", '/home/souto/.local/bin/OmniSharp/OmniSharp.dll' }
