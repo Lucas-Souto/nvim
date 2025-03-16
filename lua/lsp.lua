@@ -23,7 +23,8 @@ function lsp_attach(client, bufnr)
 				next_parameter = "<Right>",
 				previous_parameter = "<Left>",
 				close_signature = "q"
-			}
+			},
+			display_automatically = false
 		})
 		keymap('i', '<C-d>', "<cmd>:LspOverloadsSignature<cr>", opts)
 	end
