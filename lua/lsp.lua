@@ -12,6 +12,21 @@ function lsp_attach(client, bufnr)
 	keymap('n', 'st', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
 	keymap('n', 'sr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
 	keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+
+	if client.server_capabilities.signatureHelpProvider then
+		require('lsp-overloads').setup(client,
+		{
+			keymaps =
+			{
+				next_signature = "<Down>",
+				previous_signature = "<Up>",
+				next_parameter = "<Right>",
+				previous_parameter = "<Left>",
+				close_signature = "q"
+			}
+		})
+		keymap('i', '<C-d>', "<cmd>:LspOverloadsSignature<cr>", opts)
+	end
 end
 
 lsp_zero.extend_lspconfig(
