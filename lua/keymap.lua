@@ -94,3 +94,6 @@ keymap('n', '<Space>d', ':lua vim.diagnostic.goto_next()<cr>', opt)
 
 -- @ > |
 keymap('n', '|', '@', opt)
+
+-- Abrir todos os os arquivos do quickfix
+keymap('n', '<C-q>', ':silent q | cfdo! tabedit<cr>', s_opt)
