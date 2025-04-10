@@ -54,10 +54,6 @@ keymap('n', '<C-f>b', ':Telescope file_browser path=%:p:h select_buffer=true<CR>
 keymap('n', '<C-g>c', ':Telescope git_commits<CR>', s_opt)
 keymap('n', '<C-g>s', ':Telescope git_status<CR>', s_opt)
 
--- Atalhos do Dotnet
-keymap('n', '<C-d>b', '<C-w>v<CR>:terminal dotnet build ..<CR>', s_opt)
-keymap('n', '<C-d>r', '<C-w>v<CR>:terminal dotnet run --project ..<CR>', s_opt)
-
 -- Navegação entre janelas
 keymap('n', '<C-Right>', '<C-w>l', s_opt)
 keymap('n', '<C-Left>', '<C-w>h', s_opt)
@@ -97,3 +93,7 @@ keymap('n', '|', '@', opt)
 
 -- Abrir todos os os arquivos do quickfix
 keymap('n', '<C-q>', ':silent q | cfdo! tabedit<cr>', s_opt)
+
+-- Atalhos de build
+keymap('n', '<C-d>b', ':lua require("functions").build_cmd()<CR>', s_opt)
+keymap('n', '<C-d>r', ':lua require("functions").run_cmd()<CR>', s_opt)

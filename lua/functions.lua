@@ -15,4 +15,19 @@ M.embrace_selection = function(startChar, endChar)
 	end
 end
 
+M.build_cmd = function()
+	if vim.bo.filetype == 'rust' then
+		vim.cmd(':Cbuild');
+	else
+		vim.cmd('<C-w>s<CR>:terminal dotnet build ..');
+	end
+end
+
+M.run_cmd = function()
+	if vim.bo.filetype == 'rust' then
+		vim.cmd(':Crun');
+	else
+		vim.cmd('<C-w>s<CR>:terminal dotnet run --project ..');
+	end
+end
 return M
