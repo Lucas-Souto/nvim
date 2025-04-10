@@ -41,6 +41,13 @@ lsp_config.omnisharp.setup(
 {
     cmd = { "dotnet", '/home/souto/.local/bin/OmniSharp/OmniSharp.dll' }
 })
+lsp_config.rust_analyzer.setup(
+{
+	settings =
+	{
+		['rust-analyzer'] = { diagnostics = { enable = false } }
+	}
+})
 
 cmp.setup(
 {
