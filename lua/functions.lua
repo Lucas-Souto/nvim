@@ -19,7 +19,7 @@ M.build_cmd = function()
 	if vim.bo.filetype == 'rust' then
 		vim.cmd(':Cbuild');
 	else
-		vim.cmd('<C-w>s<CR>:terminal dotnet build ..');
+		vim.cmd('exe ":normal \\<C-w>s\\<CR>:terminal dotnet build ..\\<CR>"');
 	end
 end
 
@@ -27,7 +27,7 @@ M.run_cmd = function()
 	if vim.bo.filetype == 'rust' then
 		vim.cmd(':Crun');
 	else
-		vim.cmd('<C-w>s<CR>:terminal dotnet run --project ..');
+		vim.cmd('exe ":normal \\<C-w>s\\<CR>:terminal dotnet run --project ..\\<CR>"');
 	end
 end
 return M
