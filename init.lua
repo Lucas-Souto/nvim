@@ -9,7 +9,6 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.completeopt:remove('preview')
 vim.opt.foldmethod = 'indent'
-vim.g.rust_recommended_style = 0
 
 package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto 
 
