@@ -16,7 +16,6 @@ Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v4.x' })
 Plug('Issafalcon/lsp-overloads.nvim')
-Plug('rust-lang/rust.vim')
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status
