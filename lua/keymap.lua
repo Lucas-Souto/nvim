@@ -54,12 +54,6 @@ keymap('n', '<C-f>b', ':Telescope file_browser path=%:p:h select_buffer=true<CR>
 keymap('n', '<C-g>c', ':Telescope git_commits<CR>', s_opt)
 keymap('n', '<C-g>s', ':Telescope git_status<CR>', s_opt)
 
--- Navegação entre janelas
-keymap('n', '<C-Right>', '<C-w>l', s_opt)
-keymap('n', '<C-Left>', '<C-w>h', s_opt)
-keymap('n', '<C-Down>', '<C-w>j', s_opt)
-keymap('n', '<C-Up>', '<C-w>k', s_opt)
-
 -- Modificação do tamanho das janelas
 keymap('n', '<C-w><Left>', ':vertical resize -2<CR>', s_opt)
 keymap('n', '<C-w><Right>', ':vertical resize +2<CR>', s_opt)
@@ -69,17 +63,14 @@ keymap('n', '<C-w><Down>', ':resize +2<CR>', s_opt)
 -- Manipulação de abas
 keymap('n', '<C-t>n', ':tabnew<CR>', s_opt)
 keymap('n', '<C-t>c', ':tab split<CR>', s_opt)
-keymap('n', '<C-t>w', ':tabclose<CR>', s_opt)
-keymap('n', '<C-t>W', ':tabonly<CR>', s_opt)
+keymap('n', '<C-t>w', ':tabonly<CR>', s_opt)
 
 -- Navegação entre abas
-keymap('n', '<C-t><Left>', ':-tabnext<CR>', s_opt)
-keymap('n', '<C-t><Right>', ':+tabnext<CR>', s_opt)
 keymap('n', '<C-t>t', ':Tabby jump_to_tab<CR>', s_opt)
 
 -- Movimentação de abas
-keymap('n', '<C-t>m<Left>', ':-tabmove<CR>', s_opt)
-keymap('n', '<C-t>m<Right>', ':+tabmove<CR>', s_opt)
+keymap('n', '<C-h>', ':-tabmove<CR>', s_opt)
+keymap('n', '<C-l>', ':+tabmove<CR>', s_opt)
 
 -- Fold save e load
 keymap('n', 'zs', ':mkview<CR>', s_opt)
