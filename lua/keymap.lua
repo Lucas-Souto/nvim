@@ -66,6 +66,8 @@ keymap('n', '<C-t>c', ':tab split<CR>', s_opt)
 keymap('n', '<C-t>w', ':tabonly<CR>', s_opt)
 
 -- Navegação entre abas
+keymap('n', ',', ':-tabnext<CR>', s_opt)
+keymap('n', '.', ':+tabnext<CR>', s_opt)
 keymap('n', '<C-t>t', ':Tabby jump_to_tab<CR>', s_opt)
 
 -- Movimentação de abas
