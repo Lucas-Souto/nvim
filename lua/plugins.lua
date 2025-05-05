@@ -10,9 +10,6 @@ Plug('norcalli/nvim-colorizer.lua')-- Pré-visualizar cores (#000, rgba(...))
 Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Buscador de arquivos (Depende de BurntSushi/ripgrep)
 Plug('nvim-telescope/telescope-file-browser.nvim')-- Explorador de arquivos
--- Linguagem
-Plug('hrsh7th/nvim-cmp')
-Plug('hrsh7th/cmp-nvim-lsp')
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status
