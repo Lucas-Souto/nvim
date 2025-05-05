@@ -71,8 +71,8 @@ keymap('n', '.', ':+tabnext<CR>', s_opt)
 keymap('n', '<C-t>t', ':Tabby jump_to_tab<CR>', s_opt)
 
 -- Movimentação de abas
-keymap('n', '<C-h>', ':-tabmove<CR>', s_opt)
-keymap('n', '<C-l>', ':+tabmove<CR>', s_opt)
+keymap('n', 'H', ':-tabmove<CR>', s_opt)
+keymap('n', 'L', ':+tabmove<CR>', s_opt)
 
 -- Fold save e load
 keymap('n', 'zs', ':mkview<CR>', s_opt)
