@@ -11,11 +11,8 @@ Plug('mbbill/undotree')-- Navegar entre o histórico de alterações
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' })-- Buscador de arquivos (Depende de BurntSushi/ripgrep)
 Plug('nvim-telescope/telescope-file-browser.nvim')-- Explorador de arquivos
 -- Linguagem
-Plug('neovim/nvim-lspconfig')
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v4.x' })
-Plug('Issafalcon/lsp-overloads.nvim')
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status
