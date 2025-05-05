@@ -18,15 +18,15 @@ function lsp_attach(client, bufnr)
 		{
 			keymaps =
 			{
-				next_signature = "<Down>",
-				previous_signature = "<Up>",
-				next_parameter = "<Right>",
-				previous_parameter = "<Left>",
-				close_signature = "q"
+				next_signature = '<Down>',
+				previous_signature = '<Up>',
+				next_parameter = '<Right>',
+				previous_parameter = '<Left>',
+				close_signature = 'q'
 			},
 			display_automatically = false
 		})
-		keymap('i', '<C-d>', "<cmd>:LspOverloadsSignature<cr>", opts)
+		keymap('i', '<C-d>', '<cmd>:LspOverloadsSignature<cr>', opts)
 	end
 end
 
@@ -39,7 +39,7 @@ lsp_zero.extend_lspconfig(
 
 lsp_config.omnisharp.setup(
 {
-    cmd = { "dotnet", '/home/souto/.local/bin/OmniSharp/OmniSharp.dll' }
+    cmd = { 'dotnet', '/home/souto/.local/bin/OmniSharp/OmniSharp.dll' }
 })
 
 cmp.setup(

@@ -23,11 +23,13 @@ Plug('nanozuki/tabby.nvim')-- Abas
 Plug('nvim-tree/nvim-web-devicons')-- Ícones do Nerdfont
 vim.call('plug#end')
 
+vim.g.user_emmet_leader_key = '<C-z>'
+
 require('monokai').setup()
 
 require('Comment').setup()
 
-require('colorizer').setup { css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } }
+require('colorizer').setup({ css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } })
 
 require('lualine').setup()
 

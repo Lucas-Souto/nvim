@@ -19,11 +19,11 @@ require('lsp')
 
 local autocmd = vim.api.nvim_create_autocmd
 
-autocmd("FileType",
+autocmd('FileType',
 {
 	callback = function()
 		vim.schedule(function()
-			vim.opt.indentexpr = "nil"
+			vim.opt.indentexpr = 'nil'
 		end)
 	end
 })
