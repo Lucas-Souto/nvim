@@ -5,7 +5,7 @@ vim.lsp.config.omnisharp =
 	capabilities = { workspace = { workspaceFolders = false } },
     cmd = { 'dotnet', '/home/souto/.local/bin/OmniSharp/OmniSharp.dll', '--languageserver' },
 	root_markers = { '.sln', '.csproj' },
-	filetypes = { 'cs', 'vb' }
+	filetypes = { 'cs' }
 }
 
 vim.lsp.enable({ 'omnisharp' })
