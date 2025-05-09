@@ -44,7 +44,7 @@ keymap('n', '<C-s>', ':w<CR>', s_opt)
 keymap('n', '<C-c>', ':q<CR>', s_opt)
 
 -- Undotree
-keymap('n', '<C-u>', ':UndotreeToggle<CR>', s_opt)
+keymap('n', '<C-w>u', ':UndotreeToggle<CR>', s_opt)
 
 -- Atalhos do Telescope (Arquivos)
 keymap('n', '<C-f>f', ':Telescope find_files<CR>', s_opt)
