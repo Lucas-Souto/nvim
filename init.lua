@@ -4,7 +4,7 @@ vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = 'unnamedplus'-- xclip
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.completeopt:remove('preview')
