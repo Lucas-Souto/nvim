@@ -15,11 +15,4 @@ M.embrace_selection = function(startChar, endChar)
 	end
 end
 
-M.build_cmd = function()
-	vim.cmd('exe ":normal \\<C-w>s\\<CR>:terminal dotnet build\\<CR>"');
-end
-
-M.run_cmd = function()
-	vim.cmd('exe ":normal \\<C-w>s\\<CR>:terminal dotnet run\\<CR>"');
-end
 return M

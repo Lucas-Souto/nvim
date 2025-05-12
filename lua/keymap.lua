@@ -87,6 +87,5 @@ keymap('n', '|', '@', opt)
 -- Abrir todos os os arquivos do quickfix
 keymap('n', '<C-q>', ':silent q | cfdo! tabedit<cr>', s_opt)
 
--- Atalhos de build
-keymap('n', '<C-d>b', ':lua require("functions").build_cmd()<CR>', s_opt)
-keymap('n', '<C-d>r', ':lua require("functions").run_cmd()<CR>', s_opt)
+-- Rodar dotnet
+keymap('n', '<C-d>r', '<C-w>s:terminal dotnet build<cr>', s_opt)
