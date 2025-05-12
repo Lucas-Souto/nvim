@@ -88,4 +88,4 @@ keymap('n', '|', '@', opt)
 keymap('n', '<C-q>', ':silent q | cfdo! tabedit<cr>', s_opt)
 
 -- Rodar dotnet
-keymap('n', '<C-d>r', '<C-w>s:terminal dotnet build<cr>', s_opt)
+keymap('n', '<C-d>r', '<C-w>s:terminal dotnet run<cr>', s_opt)
