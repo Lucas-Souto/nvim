@@ -5,9 +5,17 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 vim.lsp.config.omnisharp =
 {
 	capabilities = capabilities,
-    cmd = { 'dotnet', '/home/souto/.local/bin/OmniSharp/OmniSharp.dll', '--languageserver' },
+    cmd = { '/home/souto/.local/bin/OmniSharp/OmniSharp', '-z', '--hostPID', '12345', 'DotNet:enablePackageRestore=false', '--encoding', 'utf-8', '--languageserver' },
 	root_markers = { '.sln', '.csproj' },
-	filetypes = { 'cs' }
+	filetypes = { 'cs' },
+	settings =
+	{
+		FormattingOptions = { EnableEditorConfigSupport = true },
+		MsBuild = {},
+		RenameOptions = {},
+		RoslynExtensionsOptions = {},
+		Sdk = { IncludePrereleases = true }
+	}
 }
 
 vim.lsp.enable({ 'omnisharp' })
