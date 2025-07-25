@@ -60,32 +60,12 @@ keymap('n', '<C-w><Right>', ':vertical resize +2<CR>', s_opt)
 keymap('n', '<C-w><Up>', ':resize -2<CR>', s_opt)
 keymap('n', '<C-w><Down>', ':resize +2<CR>', s_opt)
 
--- Manipulação de abas
-keymap('n', '<C-t>n', ':tabnew<CR>', s_opt)
-keymap('n', '<C-t>c', ':tab split<CR>', s_opt)
-keymap('n', '<C-t>w', ':tabonly<CR>', s_opt)
-
--- Navegação entre abas
-keymap('n', ',', ':-tabnext<CR>', s_opt)
-keymap('n', '.', ':+tabnext<CR>', s_opt)
-keymap('n', '<C-t>t', ':Tabby jump_to_tab<CR>', s_opt)
-
--- Movimentação de abas
-keymap('n', 'H', ':-tabmove<CR>', s_opt)
-keymap('n', 'L', ':+tabmove<CR>', s_opt)
-
 -- Fold save e load
 keymap('n', 'zs', ':mkview<CR>', s_opt)
 keymap('n', 'zl', ':loadview<CR>', s_opt)
 
 -- LSP
 keymap('n', '<Space>d', ':lua vim.diagnostic.goto_next()<cr>', opt)
-
--- @ > |
-keymap('n', '|', '@', opt)
-
--- Abrir todos os os arquivos do quickfix
-keymap('n', '<C-q>', ':silent q | cfdo! tabedit<cr>', s_opt)
 
 -- Rodar dotnet
 keymap('n', '<C-d>r', '<C-w>s:terminal dotnet run<cr>', s_opt)

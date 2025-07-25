@@ -16,7 +16,6 @@ Plug('hrsh7th/cmp-nvim-lsp')
 -- Aparência
 Plug('tanvirtin/monokai.nvim')-- Tema
 Plug('nvim-lualine/lualine.nvim')-- Status
-Plug('nanozuki/tabby.nvim')-- Abas
 Plug('nvim-tree/nvim-web-devicons')-- Ícones do Nerdfont
 vim.call('plug#end')
 
@@ -29,10 +28,3 @@ require('Comment').setup()
 require('colorizer').setup({ css = { rgb_fn = true, hsl_fn = true }, html = { mode = 'foreground' } })
 
 require('lualine').setup()
-
-require('tabby.tabline').use_preset('tab_only',
-{
-	nerdfont = true,
-	lualine_theme = 'auto',
-	buf_name = { mode = "'unique'|'relative'|'tail'|'shorten'" }
-})
