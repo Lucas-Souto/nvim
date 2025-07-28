@@ -13,13 +13,12 @@ vim.opt.winborder = 'rounded'
 
 package.path = package.path .. '~/.config/nvim/lua/'-- Usar caminho absoluto 
 
+require('autosave')
 require('keymap')
 require('plugins')
 require('lsp')
 
-local autocmd = vim.api.nvim_create_autocmd
-
-autocmd('FileType',
+vim.api.nvim_create_autocmd('FileType',
 {
 	callback = function()
 		vim.schedule(function()
