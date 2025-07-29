@@ -1,5 +1,4 @@
--- Marks com números são salvas automaticamente ao sair do buffer
-local saveMarks = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' }
+local saveMarks = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' }
 local home = '/home/souto' 
 
 vim.api.nvim_create_autocmd('BufLeave',
@@ -10,12 +9,10 @@ vim.api.nvim_create_autocmd('BufLeave',
 		local cursor_pos = vim.api.nvim_win_get_cursor(0)
 
 		for i = 1, #saveMarks do
-			local file = vim.api.nvim_get_mark(saveMarks[i], {})[4]
+			local file = vim.api.nvim_get_mark(saveMarks[i], {})
 
-			if file == buf then
-				vim.api.nvim_buf_set_mark(buf_id, saveMarks[i], cursor_pos[1], cursor_pos[2], {})
-
-				break
+			if file[4] == buf then
+				vim.api.nvim_buf_set_mark(file[3], saveMarks[i], cursor_pos[1], cursor_pos[2], {})
 			end
 		end
 	end
