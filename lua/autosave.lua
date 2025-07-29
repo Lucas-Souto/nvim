@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd('BufLeave',
 		for i = 1, #saveMarks do
 			local file = vim.api.nvim_get_mark(saveMarks[i], {})
 
-			if file[4] == buf then
+			if file[1] ~= 0 and file[2] ~= 0 and file[4] == buf then
 				vim.api.nvim_buf_set_mark(file[3], saveMarks[i], cursor_pos[1], cursor_pos[2], {})
 			end
 		end
